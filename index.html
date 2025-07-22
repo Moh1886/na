@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نتائج الثانوية العامة 2025</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>نتائج الثانوية العامة 2025</h1>
+            <p>موقع عرض نتائج الثانوية العامة فور ظهورها</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-search">
+            <div class="container">
+                <h2>ابحث عن نتيجتك الآن</h2>
+                <div class="search-box">
+                    <input type="text" id="seatNumberInput" placeholder="أدخل رقم الجلوس هنا..." aria-label="أدخل رقم الجلوس">
+                    <button id="searchButton">عرض النتيجة</button>
+                </div>
+                <p class="message" id="searchMessage"></p>
+            </div>
+        </section>
+
+        <section class="results-display" id="resultsDisplay" style="display: none;">
+            <div class="container">
+                <h2>نتيجة الطالب</h2>
+                <div class="result-card">
+                    <p><strong>اسم الطالب:</strong> <span id="studentName"></span></p>
+                    <p><strong>رقم الجلوس:</strong> <span id="studentSeatNumber"></span></p>
+                    <p><strong>المدرسة:</strong> <span id="studentSchool"></span></p>
+                    <p><strong>الشعبة:</strong> <span id="studentDivision"></span></p>
+                    <p><strong>المجموع الكلي:</strong> <span id="totalScore"></span></p>
+                    <p><strong>النسبة المئوية:</strong> <span id="percentage"></span></p>
+                    <p><strong>الحالة:</strong> <span id="status" class="pass"></span></p>
+
+                    <h3>درجات المواد:</h3>
+                    <ul id="subjectScores">
+                        </ul>
+                    <button class="new-search-button" onclick="location.reload()">بحث جديد</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 نتائج الثانوية العامة. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
