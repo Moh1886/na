@@ -1,198 +1,101 @@
-/* General Styling */
 body {
-    font-family: 'Cairo', sans-serif; /* Using Cairo for a modern Arabic look */
+    font-family: 'Cairo', sans-serif;
+    background-color: #f4f7f9;
+    color: #333;
     margin: 0;
     padding: 0;
-    background-color: #f4f7f6;
-    color: #333;
-    direction: rtl; /* Right-to-left for Arabic */
+    direction: rtl;
     text-align: right;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-y: auto; /* السماح بالتمرير إذا كان المحتوى أكبر من الشاشة */
 }
 
-.container {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-/* Header */
 header {
-    background-color: #2c3e50; /* Dark blue/grey */
-    color: #fff;
-    padding: 20px 0;
+    background-color: #34495e;
+    color: white;
+    padding: 20px;
     text-align: center;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
-header h1 {
+h1 {
     margin: 0;
     font-size: 2.5em;
 }
 
-header p {
-    margin-top: 5px;
-    font-size: 1.1em;
-    opacity: 0.9;
-}
-
-/* Hero Search Section */
-.hero-search {
-    background-color: #ecf0f1; /* Light grey */
-    padding: 60px 0;
-    text-align: center;
-    border-bottom: 1px solid #ccc;
-}
-
-.hero-search h2 {
-    font-size: 2em;
-    color: #2c3e50;
-    margin-bottom: 30px;
-}
-
-.search-box {
+main {
+    flex-grow: 1;
+    padding: 20px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    gap: 15px; /* Space between input and button */
 }
 
-.search-box input[type="text"] {
-    padding: 15px 20px;
-    border: 2px solid #3498db; /* Blue border */
-    border-radius: 8px;
-    font-size: 1.1em;
-    width: 300px;
-    max-width: 80%;
-    outline: none;
-    transition: border-color 0.3s ease;
-}
-
-.search-box input[type="text"]:focus {
-    border-color: #2980b9;
-}
-
-.search-box button {
-    background-color: #3498db;
-    color: #fff;
-    border: none;
-    padding: 15px 30px;
-    border-radius: 8px;
-    font-size: 1.1em;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.search-box button:hover {
-    background-color: #2980b9;
-    transform: translateY(-2px);
-}
-
-.message {
-    margin-top: 20px;
-    font-size: 1.1em;
-    color: #e74c3c; /* Red for error messages */
-}
-
-/* Results Display Section */
-.results-display {
-    padding: 40px 0;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    margin: 30px auto;
-    border-radius: 8px;
-}
-
-.results-display h2 {
+footer {
+    background-color: #34495e;
+    color: white;
     text-align: center;
-    color: #2c3e50;
-    margin-bottom: 30px;
+    padding: 10px;
+    margin-top: auto;
 }
 
-.result-card {
-    border: 1px solid #ddd;
+/* تنسيقات القسم الخاص بالزر */
+.external-site-link-section {
+    background-color: #ffffff;
     padding: 30px;
     border-radius: 10px;
-    background-color: #f9f9f9;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-}
-
-.result-card p {
-    margin-bottom: 10px;
-    font-size: 1.1em;
-    line-height: 1.6;
-}
-
-.result-card p strong {
-    color: #2c3e50;
-}
-
-.result-card h3 {
-    margin-top: 25px;
-    margin-bottom: 15px;
-    color: #34495e;
-    border-bottom: 2px solid #eee;
-    padding-bottom: 5px;
-}
-
-#subjectScores {
-    list-style: none;
-    padding: 0;
-}
-
-#subjectScores li {
-    background-color: #ecf0f1;
-    margin-bottom: 8px;
-    padding: 10px 15px;
-    border-radius: 5px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 1em;
-}
-
-.status {
-    font-weight: bold;
-    font-size: 1.2em;
-}
-
-.status.pass {
-    color: #27ae60; /* Green for pass */
-}
-
-.status.fail {
-    color: #e74c3c; /* Red for fail */
-}
-
-.new-search-button {
-    background-color: #6c757d; /* Grey */
-    color: #fff;
-    border: none;
-    padding: 12px 25px;
-    border-radius: 5px;
-    font-size: 1em;
-    cursor: pointer;
-    margin-top: 20px;
-    display: block;
-    width: fit-content;
-    margin-left: auto; /* Align to the left in RTL */
-    transition: background-color 0.3s ease;
-}
-
-.new-search-button:hover {
-    background-color: #5a6268;
-}
-
-/* Footer */
-footer {
-    background-color: #34495e; /* Darker blue/grey */
-    color: #fff;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    width: 90%;
+    max-width: 600px; /* حجم معقول للقسم */
+    margin: 50px auto; /* توسيط القسم في الصفحة */
     text-align: center;
-    padding: 20px 0;
-    margin-top: 40px;
 }
 
-footer p {
-    margin: 0;
-    font-size: 0.9em;
-    opacity: 0.8;
+.external-site-link-section h2 {
+    color: #2c3e50;
+    margin-bottom: 25px;
+    font-size: 2.2em;
+    border-bottom: 2px solid #ecf0f1;
+    padding-bottom: 15px;
 }
+
+.external-site-link-section p {
+    font-size: 1.1em;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* تنسيقات الزر الجديد */
+.external-site-button {
+    display: inline-block; /* لجعله يتصرف كزر */
+    padding: 15px 30px;
+    background-color: #28a745; /* لون أخضر جذاب */
+    color: white;
+    text-decoration: none; /* إزالة الخط تحت اللينك */
+    border-radius: 8px;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.external-site-button:hover {
+    background-color: #218838; /* لون أغمق عند المرور بالماوس */
+    transform: translateY(-2px); /* تأثير بسيط عند المرور */
+}
+
+.note {
+    font-size: 0.85em;
+    color: #888;
+    margin-top: 20px;
+}
+
+/* إزالة أي تنسيقات سابقة للـ modal أو الـ iframe إذا كانت موجودة */
+/* .modal, .modal-content, .close-button, .modal-body, .modal-body iframe, .fixed-external-site iframe {
+    display: none;
+    // أو قم بحذفها بالكامل إذا لم تعد تستخدمها
+} */
